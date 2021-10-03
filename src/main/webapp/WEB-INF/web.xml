@@ -6,5 +6,13 @@
      Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
 
 <web-app>
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>by.it.academy.viachaslau.app.servlet.FirstServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/first</url-pattern>
+    </servlet-mapping>
 </web-app>
