@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Parser {
 
-    public Map<String, String> parseQueryString(String qStr) {
+    public static Map<String, String> parseQueryString(String qStr) {
         Map<String, String> map = new LinkedHashMap<>();
         for (String param : qStr.split("&")) {
             String[] params = param.split("=");
