@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-     Copyright 2002 Sun Microsystems, Inc. All rights reserved.
--->
 <!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web
      Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
 
 <web-app>
     <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>by.it.academy.viachaslau.app.servlet.FirstServlet</servlet-class>
+        <servlet-name>BooksServlet</servlet-name>
+        <servlet-class>by.itacademy.javaenterprise.lepnikau.app.servlet.BooksServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>by.itacademy.javaenterprise.lepnikau.app.servlet.BookServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/first</url-pattern>
+        <servlet-name>BooksServlet</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/book</url-pattern>
     </servlet-mapping>
 </web-app>

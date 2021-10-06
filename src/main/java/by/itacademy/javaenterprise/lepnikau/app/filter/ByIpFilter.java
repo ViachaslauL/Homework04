@@ -1,4 +1,4 @@
-package by.it.academy.viachaslau.app.filter;
+package by.itacademy.javaenterprise.lepnikau.app.filter;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
