@@ -1,6 +1,6 @@
 package by.itacademy.javaenterprise.lepnikau.app.filter;
 
-import by.itacademy.javaenterprise.lepnikau.app.service.IpAddrService;
+import by.itacademy.javaenterprise.lepnikau.app.service.ContentTypeService;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebFilter
-public class ByIpFilter extends HttpFilter {
-    private IpAddrService ipAddrService;
+public class ContentTypeFilter extends HttpFilter {
+    ContentTypeService cTypeService;
 
     @Override
     public void init() throws ServletException {
-        ipAddrService = new IpAddrService();
+        cTypeService = new ContentTypeService();
     }
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        String remoteAddr = req.getRemoteAddr();
+        String cType = req.getContentType();
 
-        if (ipAddrService.isExist(remoteAddr)) {
+        if (cTypeService.isExist(cType)) {
             chain.doFilter(req, res);
         } else {
-            res.getWriter().write("Ip address " + remoteAddr + " not allowed");
+            res.getWriter().write("Content-Type " + cType + " not allowed");
         }
     }
 }
